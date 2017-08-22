@@ -1,6 +1,5 @@
 var path = require('path'),
-  webpack = require('webpack'),
-  WriteFilePlugin = require('write-file-webpack-plugin');
+  webpack = require('webpack');
 
 /* production build flag */
 var isProduction = process.env.NODE_ENV === 'production';
@@ -10,7 +9,9 @@ var conf = {
   output: {
     path: path.resolve(__dirname, 'public'),
     publicPath: '/',
-    filename: 'js/build.js'
+    filename: 'js/build.js',
+    hotUpdateChunkFilename: 'hot/[id].[hash].hot-update.js',
+    hotUpdateMainFilename: 'hot/[hash].hot-update.json'
   },
   module: {
     rules: [{
@@ -27,10 +28,7 @@ var conf = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NamedModulesPlugin(),
-    new WriteFilePlugin({
-      test: /^(?!.*(hot)).*/,
-    })
+    new webpack.NamedModulesPlugin()
   ],
   devtool: isProduction ? 'cheap-module-source-map' : false
 };
