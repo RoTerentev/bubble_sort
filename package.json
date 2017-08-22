@@ -4,6 +4,7 @@
   "description": "",
   "scripts": {
     "dev": "webpack -w & lite-server",
+    "lite": "lite-server",
     "build": "webpack -p"
   },
   "devDependencies": {

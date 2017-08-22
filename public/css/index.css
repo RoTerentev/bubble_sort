@@ -96,7 +96,8 @@ span {
   margin: 5px auto;
 }
 
-.data__form {
+.data__form,
+.ctrl {
   font-size: 0;
   padding: 0;
   margin: 0 0 10px 0;
@@ -105,7 +106,8 @@ span {
 }
 
 .data__field,
-.data__subm {
+.data__subm,
+.ctrl__btn {
   display: block;
   width: 100%;
   font-size: 16px;
@@ -129,14 +131,31 @@ span {
   color: #309288;
 }
 
-.data__subm {
+.data__subm,
+.ctrl__btn {
   background-color: #009587;
   color: #ffd194;
 }
 
+.ctrl__btn {
+  width: 25%;
+  display: inline-block;
+}
+
+.ctrl__btn--light {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #309288;
+  border-left: 1px solid #309288;
+}
+
+.ctrl__btn--light:last-child {
+  border-left: none;
+}
+
 @media all and (min-width: 768px) {
   .data__field,
-  .data__subm {
+  .data__subm,
+  .ctrl__btn {
     font-size: 1rem;
     line-height: 2;
     display: inline-block;
@@ -147,7 +166,8 @@ span {
   .data__subm {
     width: 30%;
   }
-  .data__form {
+  .data__form,
+  .ctrl {
     width: auto;
     min-width: 400px;
     display: inline-block;
