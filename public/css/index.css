@@ -96,18 +96,25 @@ span {
   margin: 5px auto;
 }
 
+.controls {
+  margin: 0 0 10px 0;
+}
+
 .data__form,
-.ctrl {
+.panel {
   font-size: 0;
   padding: 0;
-  margin: 0 0 10px 0;
-  border-radius: 5px;
   border: 1px solid #009587;
+  border-radius: 5px;
+}
+
+.panel {
+  display: none;
 }
 
 .data__field,
 .data__subm,
-.ctrl__btn {
+.panel__btn {
   display: block;
   width: 100%;
   font-size: 16px;
@@ -132,42 +139,42 @@ span {
 }
 
 .data__subm,
-.ctrl__btn {
+.panel__btn {
   background-color: #009587;
   color: #ffd194;
+  box-sizing: border-box;
 }
 
-.ctrl__btn {
+.panel__btn {
   width: 25%;
   display: inline-block;
 }
 
-.ctrl__btn--light {
+.panel__btn--light {
   background-color: rgba(255, 255, 255, 0.5);
   color: #309288;
-  border-left: 1px solid #309288;
+  border-right: 1px solid #309288;
 }
 
-.ctrl__btn--light:last-child {
-  border-left: none;
+.panel__btn--light:last-child {
+  border-right: none;
 }
 
 @media all and (min-width: 768px) {
   .data__field,
   .data__subm,
-  .ctrl__btn {
+  .panel__btn {
     font-size: 1rem;
     line-height: 2;
     display: inline-block;
   }
   .data__field {
-    width: 70%;
+    width: 75%;
   }
   .data__subm {
-    width: 30%;
+    width: 25%;
   }
-  .data__form,
-  .ctrl {
+  .controls {
     width: auto;
     min-width: 400px;
     display: inline-block;
