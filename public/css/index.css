@@ -1,0 +1,161 @@
+* {
+  font-family: Ubuntu, sans-serif, Arial, Helvetica;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #70e1f5;
+  background: -webkit-linear-gradient(to right, #ffd194, #70e1f5);
+  background: linear-gradient(to right, #ffd194, #70e1f5);
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+ol,
+li,
+span {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  padding: 0 5px;
+  max-width: 1024px;
+  min-width: 320px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.page-header {
+  font-size: 1.4rem;
+  margin: 20px auto;
+  display: inline-block;
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 10px 20px;
+  color: #009587;
+  width: auto;
+}
+
+.desc {
+  background-color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  margin-bottom: 5px;
+  padding: 10px;
+  text-align: left;
+  color: #009587;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.desc ol {
+  margin: 10px 0;
+  padding-left: 2em;
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+.desc__exmp {
+  display: inline-block;
+  background-color: white;
+  padding: 2px 5px;
+  border-radius: 2px;
+}
+
+.desc__exmp--subm {
+  background-color: #009587;
+  color: #ffd194;
+}
+
+.desc__ps {
+  font-size: 0.7em;
+  display: inline-block;
+  text-align: center;
+  padding: 0 5px;
+}
+
+.scene {
+  display: block;
+  overflow: auto;
+  min-width: 100%;
+  height: 300px;
+  background-color: rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin: 5px auto;
+}
+
+.data__form {
+  font-size: 0;
+  padding: 0;
+  margin: 0 0 10px 0;
+  border-radius: 5px;
+  border: 1px solid #009587;
+}
+
+.data__field,
+.data__subm {
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  box-sizing: border-box;
+  line-height: 2.5;
+  outline: none;
+  border: 0;
+  margin: 0;
+  border-radius: 0;
+}
+
+.data__field {
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 2px 5px;
+  color: #009587;
+}
+
+.data__field::placeholder {
+  text-align: center;
+  text-overflow: ellipsis;
+  color: #309288;
+}
+
+.data__subm {
+  background-color: #009587;
+  color: #ffd194;
+}
+
+@media all and (min-width: 768px) {
+  .data__field,
+  .data__subm {
+    font-size: 1rem;
+    line-height: 2;
+    display: inline-block;
+  }
+  .data__field {
+    width: 70%;
+  }
+  .data__subm {
+    width: 30%;
+  }
+  .data__form {
+    width: auto;
+    min-width: 400px;
+    display: inline-block;
+  }
+  .scene {
+    height: 400px;
+  }
+  .page-header {
+    font-size: 2rem;
+  }
+}
