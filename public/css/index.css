@@ -86,14 +86,57 @@ span {
 }
 
 .scene {
-  display: block;
-  overflow: auto;
-  min-width: 100%;
-  height: 300px;
+  position: relative;
+  height: 200px;
   background-color: rgba(255, 255, 255, 0.3);
+  max-width: 100%;
+  width: auto;
+  overflow: auto;
   box-sizing: border-box;
   border-radius: 5px;
-  margin: 5px auto;
+  margin-bottom: 10px;
+  user-select: none;
+}
+
+.scene__wrapper {
+  position: absolute;
+  white-space: nowrap;
+  left: 0;
+  right: 0;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.scene__wrapper:before {
+  content: '';
+  font-size: 0;
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.scene__item {
+  display: inline-block;
+  width: auto;
+  box-sizing: border-box;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  border: 3px solid #009587;
+  text-align: center;
+  min-width: 60px;
+  font-size: 16px;
+  height: 40px;
+  padding: 0 5px;
+  margin: 2px;
+}
+
+.scene__item--active {
+  box-shadow: 0 0 5px 2px #009587;
+}
+
+.scene__lbl {
+  color: #009587;
+  line-height: 34px;
 }
 
 .controls {
@@ -180,7 +223,17 @@ span {
     display: inline-block;
   }
   .scene {
-    height: 400px;
+    height: 300px;
+  }
+  .scene__item {
+    min-width: 80px;
+    height: 50px;
+    padding: 0 10px;
+    margin: 5px;
+    font-size: 1rem;
+  }
+  .scene__lbl {
+    line-height: 44px;
   }
   .page-header {
     font-size: 2rem;
