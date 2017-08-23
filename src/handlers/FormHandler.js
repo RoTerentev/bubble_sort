@@ -2,7 +2,7 @@
  * Form handler class
  */
 
-const inputName = 'data';
+const INPUT_NAME = 'data';
 
 export default class FormHandler {
 
@@ -16,7 +16,7 @@ export default class FormHandler {
     this.form = document.forms[0];
     if (!!this.form) {
       this.form.onsubmit = this.submit;
-      this.input = this.form[inputName];
+      this.input = this.form[INPUT_NAME];
       this._addConstrains();
     }
 
@@ -29,6 +29,7 @@ export default class FormHandler {
     this.formatData();
     let dataArr = [];
 
+    /* Generate default content */
     if (this.input.value === "") {
       for (let i = 0; i <= 7; i++) {
         dataArr.push(Math.round(Math.random() * 100));
@@ -47,6 +48,9 @@ export default class FormHandler {
     let rawVal = this.input.value;
     /* Replace comma to space */
     rawVal = rawVal.replace(/,/g, ' ');
+
+    /* Replace minus without number */
+    rawVal = rawVal.replace(/-\D/g, ' ');
 
     /* Trim right*/
     rawVal = rawVal.replace(/\D*$/, '');
