@@ -18,4 +18,5 @@ document.addEventListener('FormChecked', (e) => {
   let th = new TimelineHandler(sh.getTimeline(), 'TimelineStop');
 
   document.addEventListener('TimelineStop', switchControls);
+  document.addEventListener('VisualSortEnd', switchControls);
 });

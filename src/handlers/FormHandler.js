@@ -33,7 +33,7 @@ export default class FormHandler {
     if (this.input.value === "") {
       for (let i = 0; i <= 7; i++) {
         dataArr.push(Math.round(Math.random() * 100));
-        this.input.value = dataArr.join(',');
+        this.input.value = dataArr.join(' ');
       }
     } else {
       dataArr = this.input.value.split(' ');

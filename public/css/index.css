@@ -86,12 +86,9 @@ span {
 }
 
 .scene {
-  position: relative;
   height: 200px;
   background-color: rgba(255, 255, 255, 0.3);
-  max-width: 100%;
-  width: auto;
-  overflow: auto;
+  width: 100%;
   box-sizing: border-box;
   border-radius: 5px;
   margin-bottom: 10px;
@@ -99,7 +96,8 @@ span {
 }
 
 .scene__wrapper {
-  position: absolute;
+  position: relative;
+  overflow: auto;
   white-space: nowrap;
   left: 0;
   right: 0;
