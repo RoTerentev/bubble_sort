@@ -6,7 +6,7 @@
     "dev": "webpack -w & lite-server",
     "lite": "lite-server",
     "build": "webpack -p",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d public"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
