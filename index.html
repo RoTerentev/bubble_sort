@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu" />
+  <link rel="stylesheet" href="css/index.css">
+  <title>Bubble sort</title>
+</head>
+
+<body>
+
+  <main class="wrapper">
+
+    <h1 class="page-header">Сортировка пузырьком</h1>
+
+    <div class="desc">
+      Описание работы:
+      <ol>
+        <li>В поле для чисел ведите ваши данные через запятую или пробел.
+          <nobr>Например: <i class="desc__exmp">1,4,6,3,7,2</i></nobr>
+        </li>
+        <li>Нажмите кнопку <span class="desc__exmp desc__exmp--subm">выполнить</span> для визуализации сортировки</li>
+      </ol>
+      <span class="desc__ps">* По умолчанию страница генерирует случайный массив чисел, для его визаулизации достаточно п.2</span>
+    </div>
+
+    <section class="scene">
+
+      <div class="scene__wrapper">
+        <!-- Content wil be created in runtime -->
+      </div>
+
+    </section>
+
+    <div class="controls">
+
+      <form action="#" class="data__form">
+        <input type="text" value="" class="data__field" name="data" placeholder="поле для чисел" autocomplete="off" />
+        <button class="data__subm">выполнить</button>
+      </form>
+
+      <div class="panel">
+        <button id="slowly" class="panel__btn">&#8672;</button>
+        <button id="pp" data-play=false class="panel__btn panel__btn--light">пауза</button>
+        <button id="stop" class="panel__btn panel__btn--light">стоп</button>
+        <button id="faster" class="panel__btn">&#8674;</button>
+      </div>
+    </div>
+
+  </main>
+
+  <script type="text/javascript" src="js/build.js" defer></script>
+</body>
+
+</html>
